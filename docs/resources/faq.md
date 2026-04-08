@@ -4,32 +4,107 @@ title: FAQ and Troubleshooting
 
 # FAQ and Troubleshooting
 
-## 1) speckit spec is not working
-Check Node.js version, spec-kit installation, and GitHub MCP connectivity.
+## Setup
 
-## 2) Copilot ignores my instructions
-Verify `.instructions.md` is in repo root and VS Code settings reference it.
+### spec-kit isn't installing
 
-## 3) I cannot access Group C
-Complete all lessons in Group A or all lessons in Group B first.
+Check that Node.js is installed and on your `PATH`:
+```bash
+node --version   # should be 18+
+npm --version
+```
+Try with explicit registry: `npm install -g @github/spec-kit --registry https://registry.npmjs.org`
 
-## 4) Agent vs Skill difference
-Agent is a role. Skill is a repeatable workflow.
+If the package is not found, check the [spec-kit repository](https://github.com/github/spec-kit) for the correct package name — it may be published under a different name.
 
-## 5) Do I need GitHub Enterprise for spec-kit?
-No. spec-kit workflow works with standard GitHub repositories.
+### Copilot ignores my workspace instructions
 
-## 6) My agent file is not detected
-Validate YAML front matter syntax and file path under `.github/agents/`.
+- Confirm the file is at exactly `.github/copilot-instructions.md` (case-sensitive on Linux/macOS)
+- The file must be in the **root** of the workspace, not in a subdirectory
+- Reload VS Code window (`Ctrl+Shift+P` → "Developer: Reload Window") after creating the file
 
-## 7) Can starter template become my real project?
-Yes. It is designed to evolve into your hackathon implementation repo.
+### My agent file is not detected
 
-## 8) speckit plan is not linking to Epic
-Use correct issue number and ensure Epic issue exists and is open.
+- Confirm the file path is `.github/agents/<name>.agent.md`
+- Check the YAML frontmatter — it must be valid YAML with a `name` and `description` field
+- Ensure there are no tabs in the frontmatter (YAML requires spaces)
 
-## 9) Do I need the exact text NEEDS CLARIFICATION?
-No. Use a consistent marker that your team understands.
+---
 
-## 10) Can I do Group B before Group A?
-Yes. Groups A and B are parallel entry paths.
+## MCP and GitHub Integration
+
+### The GitHub MCP server isn't connecting
+
+1. Confirm the `GITHUB_TOKEN` environment variable is set in the **current** terminal session (not a different one)
+2. Confirm the token has `repo` and `read:org` scopes — check at [github.com/settings/tokens](https://github.com/settings/tokens)
+3. Confirm `.vscode/mcp.json` exists in the project root
+4. Check the VS Code Output panel for MCP server error messages
+
+### Copilot can't find my repository when using MCP
+
+Specify the owner and repository explicitly in your prompt:
+```
+List issues from the [owner]/[repo] repository.
+```
+If you're in an organization, also ensure the token has `read:org` scope.
+
+### I accidentally committed my GitHub token
+
+Immediately revoke it at [github.com/settings/tokens](https://github.com/settings/tokens) and generate a new one. Never hardcode tokens in files that are committed to a repository.
+
+---
+
+## Spec-Driven Workflow
+
+### Where should I write the constitution vs. the epic?
+
+**Constitution**: project-wide decisions that apply to every feature. Stack, values, out-of-scope at the project level.
+
+**Epic**: feature-level decisions. What this feature does, what it does not do, how done is verified.
+
+When in doubt: if the decision applies to more than one epic, it belongs in the constitution.
+
+### How specific do acceptance criteria need to be?
+
+Each AC item should be verifiable from the outside without knowing how it was implemented. If you can verify it by running the application or running a test, it's specific enough. If you need to read the code to verify it, rewrite it.
+
+### What if speckit clarify surfaces a question I can't answer yet?
+
+Mark it explicitly:
+```markdown
+<!-- OPEN QUESTION: [question text] — deferred because [reason] -->
+```
+Don't leave it unmarked. An unmarked gap will be silently answered by Copilot during code generation.
+
+### How many tasks should an epic produce?
+
+Depends on feature size. A good task takes 5–15 minutes in Agent Mode. If a task would take longer, split it. If a task takes under 2 minutes, consider whether it's its own task or part of a larger one.
+
+---
+
+## Plan Mode vs. Agent Mode
+
+### When should I use Plan Mode?
+
+When you have a fuzzy requirement and need to surface assumptions before committing to code. Plan Mode asks questions — use it to get those questions answered in the spec, not improvised during code review.
+
+### Agent Mode keeps asking clarifying questions instead of writing code
+
+You're handing it a vague requirement. Give it the locked requirements from your spec task. The more specific the task content, the less Agent Mode will need to clarify.
+
+---
+
+## Module Navigation
+
+### Can I skip Module 1 and 2?
+
+If you already use Copilot instructions and agents regularly, yes — start at [Module 3](/module3/). M1 and M2 build the vocabulary that M3 relies on, but they're not gate-locked.
+
+### Is L2.3 (Skills) part of the workshop?
+
+No. L2.3 is deferred and not covered in this workshop session.
+
+### Do I need to complete the workshop in order?
+
+M1 → M2 → M3 → M4 → M5 is the intended order. M4 and M5 depend on having a spec from M3. M2 builds tools (Code Reviewer agent) that M3 uses. M1 is independent but sets context for everything else.
+

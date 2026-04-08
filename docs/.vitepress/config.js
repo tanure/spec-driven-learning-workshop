@@ -6,58 +6,77 @@ function normalizeBaseUrl(baseUrl) {
 }
 
 export default defineConfig({
-  title: 'Hackathon Learning Workshop',
+  title: 'Spec-Driven Development Workshop',
   description:
-    'A 90-minute journey through Copilot instructions, agents, skills, and spec-driven development.',
+    'A structured workshop that replaces vibe coding with a repeatable spec-driven development workflow using GitHub Copilot.',
   base: normalizeBaseUrl(process.env.BASE_URL),
 
   themeConfig: {
-    siteTitle: 'Hackathon Workshop',
+    siteTitle: 'Spec-Driven Workshop',
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Group A', link: '/groupA/' },
-      { text: 'Group B', link: '/groupB/' },
-      { text: 'Group C', link: '/groupC/' },
-      { text: 'Cheatsheet', link: '/resources/cheatsheet' },
-      { text: 'FAQ', link: '/resources/faq' },
+      { text: 'M1', link: '/module1/' },
+      { text: 'M2', link: '/module2/' },
+      { text: 'M3', link: '/module3/' },
+      { text: 'M4', link: '/module4/' },
+      { text: 'M5', link: '/module5/' },
+      { text: 'Resources', link: '/resources/cheatsheet' },
     ],
 
     sidebar: {
-      '/groupA/': [
+      '/module1/': [
         {
-          text: 'Group A: Copilot Foundation',
+          text: 'M1: The AI Development Problem',
           items: [
-            { text: 'Overview', link: '/groupA/' },
-            { text: 'A1: The Vibing Trap', link: '/groupA/A1-vibing' },
-            { text: 'A2: Meet .instructions.md', link: '/groupA/A2-instructions' },
-            { text: 'A3: Copilot Actually Listens', link: '/groupA/A3-respects' },
-            { text: 'A4: Custom Copilot Agents', link: '/groupA/A4-agents' },
-            { text: 'A5: AI Skills - Repeatable Workflows', link: '/groupA/A5-skills' },
+            { text: 'Module Overview', link: '/module1/' },
+            { text: 'L1.1: The Vibing Trap', link: '/module1/L1-1-vibing' },
+            { text: 'L1.2: The Three Pillars', link: '/module1/L1-2-three-pillars' },
           ],
         },
       ],
-      '/groupB/': [
+      '/module2/': [
         {
-          text: 'Group B: Spec-Driven Development',
+          text: 'M2: Copilot Best Practices',
           items: [
-            { text: 'Overview', link: '/groupB/' },
-            { text: 'B1: Coding Without a Map', link: '/groupB/B1-without-specs' },
-            { text: 'B2: Writing Real Specifications', link: '/groupB/B2-writing-specs' },
-            { text: 'B3: The Full Spec-Kit Journey', link: '/groupB/B3-speckit-flow' },
-            { text: 'B4: Skills That Make Specs Smarter', link: '/groupB/B4-skills-specs' },
-            { text: 'B5: From Spec to Working Code', link: '/groupB/B5-from-specs-to-code' },
-            { text: 'B6: The Big Comparison', link: '/groupB/B6-comparison' },
+            { text: 'Module Overview', link: '/module2/' },
+            { text: 'L2.1: Instructions That Actually Work', link: '/module2/L2-1-instructions' },
+            { text: 'L2.2: Agents and Decision Patterns', link: '/module2/L2-2-agents' },
+            { text: 'L2.4: Plan Mode vs. Agent Mode', link: '/module2/L2-4-plan-vs-agent' },
           ],
         },
       ],
-      '/groupC/': [
+      '/module3/': [
         {
-          text: 'Group C: Integration & Use Cases',
+          text: 'M3: Spec-Driven Development',
           items: [
-            { text: 'Overview', link: '/groupC/' },
-            { text: 'C1: The Complete Workflow', link: '/groupC/C1-together' },
-            { text: 'C2: Use Cases and High-Level Plans', link: '/groupC/C2-use-cases' },
+            { text: 'Module Overview', link: '/module3/' },
+            { text: 'L3.1: The Cost of No Specs', link: '/module3/L3-1-cost-no-specs' },
+            { text: 'L3.2: Writing Specs That Guide AI', link: '/module3/L3-2-writing-specs' },
+            { text: 'L3.3: The Spec-Kit Workflow', link: '/module3/L3-3-speckit-workflow' },
+            { text: 'L3.4: Clarification Before Code', link: '/module3/L3-4-clarification' },
+            { text: 'L3.5: From Specs to Code', link: '/module3/L3-5-spec-to-code' },
+          ],
+        },
+      ],
+      '/module4/': [
+        {
+          text: 'M4: GitHub MCP Integration',
+          items: [
+            { text: 'Module Overview', link: '/module4/' },
+            { text: 'L4.1: What Is MCP and Why It Matters', link: '/module4/L4-1-what-is-mcp' },
+            { text: 'L4.2: The Write-Read Loop', link: '/module4/L4-2-write-read-loop' },
+          ],
+        },
+      ],
+      '/module5/': [
+        {
+          text: 'M5: Putting It All Together',
+          items: [
+            { text: 'Module Overview', link: '/module5/' },
+            { text: 'L5.1: The Full Spec-Driven Simulation', link: '/module5/L5-1-full-workflow' },
+            { text: 'L5.2: Real-World Use Cases', link: '/module5/L5-2-use-cases' },
+            { text: 'L5.3: Progressive Automation', link: '/module5/L5-3-automation' },
           ],
         },
       ],
@@ -80,7 +99,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Hackathon Learning Workshop — spec-driven development with GitHub Copilot',
+      message: 'Spec-Driven Development Workshop — structured AI development with GitHub Copilot',
     },
 
     search: {
