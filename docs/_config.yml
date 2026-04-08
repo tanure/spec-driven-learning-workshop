@@ -1,0 +1,42 @@
+title: "Hackathon Learning Workshop"
+description: "A 90-minute journey through Copilot instructions, agents, skills, and spec-driven development."
+baseurl: "/hackathon-learning-workshop"
+url: "https://YOUR-ORG.github.io"
+author: "Hackathon Team"
+
+theme: minima
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: "groupA"
+      type: pages
+    values:
+      layout: lesson
+  - scope:
+      path: "groupB"
+      type: pages
+    values:
+      layout: lesson
+  - scope:
+      path: "groupC"
+      type: pages
+    values:
+      layout: lesson
+  - scope:
+      path: "resources"
+      type: pages
+    values:
+      layout: page
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

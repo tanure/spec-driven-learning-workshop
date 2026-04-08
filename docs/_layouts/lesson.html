@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Hackathon Learning Workshop</title>
+  <link rel="stylesheet" href="{{ '/assets/css/workshop.css' | relative_url }}">
+</head>
+<body data-lesson="{{ page.lesson_id }}" data-group="{{ page.group }}" data-group-size="{{ page.group_size }}">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="{{ '/' | relative_url }}" class="site-logo">Hackathon Workshop</a>
+      <nav class="header-nav">
+        <a href="{{ '/groupA/' | relative_url }}"{% if page.group == 'A' %} class="active"{% endif %}>Group A</a>
+        <a href="{{ '/groupB/' | relative_url }}"{% if page.group == 'B' %} class="active"{% endif %}>Group B</a>
+        <a id="group-c-link" href="{{ '/groupC/' | relative_url }}"{% if page.group == 'C' %} class="active"{% endif %}>Group C</a>
+        <a href="{{ '/resources/cheatsheet' | relative_url }}">Cheatsheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="lesson-wrapper">
+    <aside class="lesson-sidebar">
+      <p class="group-label">Group {{ page.group }}</p>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p id="progress-text">0 / {{ page.group_size }} lessons</p>
+      <p><a href="{{ '/group' | append: page.group | append: '/' | relative_url }}">Group overview</a></p>
+      <p><a href="{{ '/' | relative_url }}">Dashboard</a></p>
+    </aside>
+
+    <main class="lesson-content">
+      <div class="lesson-badges">
+        <span class="badge group-{{ page.group | downcase }}">Group {{ page.group }}</span>
+        <span class="badge-time">{{ page.duration }} min</span>
+      </div>
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+
+      <hr>
+      <div class="navigation-footer">
+        {% if page.prev %}
+          <a class="btn btn-secondary" href="{{ page.prev | relative_url }}">Previous</a>
+        {% else %}
+          <a class="btn btn-secondary" href="{{ '/group' | append: page.group | append: '/' | relative_url }}">Group Home</a>
+        {% endif %}
+
+        {% if page.next %}
+          <a id="next-btn" class="btn btn-primary" href="{{ page.next | relative_url }}">Next</a>
+        {% else %}
+          <a class="btn btn-success" href="{{ '/' | relative_url }}">Finish / Dashboard</a>
+        {% endif %}
+      </div>
+    </main>
+  </div>
+
+  <script src="{{ '/assets/js/workshop.js' | relative_url }}"></script>
+</body>
+</html>
