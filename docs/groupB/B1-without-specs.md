@@ -33,6 +33,6 @@ Copilot starts coding, but key requirements are unclear: guest checkout, discoun
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupB/">Group Home</a>
-  <a id="next-btn" class="btn btn-primary" href="/groupB/B2-writing-specs">Next →</a>
+  <a class="btn btn-secondary" href="./">Group Home</a>
+  <a id="next-btn" class="btn btn-primary" href="./B2-writing-specs">Next →</a>
 </div>
