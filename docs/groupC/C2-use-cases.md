@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "C2: Use Cases and High-Level Plans"
-lesson_id: C2
-group: C
-group_size: 2
-lesson_number: 2
-duration: 8
-prev: /groupC/C1-together
-next:
 ---
+
+<div class="lesson-badges"><span class="badge group-c">Group C</span><span class="badge-time">8 min</span></div>
+
+# C2: Use Cases and High-Level Plans
 
 Here are use cases you can adopt immediately after the workshop.
 
@@ -59,4 +55,7 @@ Use this pattern for all projects: Constitution → Spec → Clarify → Plan �
 <label><input type="checkbox" class="checkpoint-check"> I selected at least one use case and can start with the spec-kit flow.</label>
 </div>
 
-<a class="btn btn-success" href="https://YOUR-ORG.github.io/hackathon-docs">Join the main hackathon</a>
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="./C1-together">← Previous</a>
+  <a class="btn btn-success" href="../">🏁 Finish — Back to Dashboard</a>
+</div>

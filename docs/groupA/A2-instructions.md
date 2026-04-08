@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "A2: Meet .instructions.md"
-lesson_id: A2
-group: A
-group_size: 5
-lesson_number: 2
-duration: 5
-prev: /groupA/A1-vibing
-next: /groupA/A3-respects
 ---
+
+<div class="lesson-badges"><span class="badge group-a">Group A</span><span class="badge-time">5 min</span></div>
+
+# A2: Meet .instructions.md
 
 Instructions tell Copilot how your team works.
 
@@ -50,4 +46,9 @@ Define standards once in <code>.instructions.md</code>. Copilot loads them autom
 <div class="checkpoint">
 <label><input type="checkbox" class="checkpoint-check"> I forked the starter repository.</label><br>
 <label><input type="checkbox" class="checkpoint-check"> I committed a customized .instructions.md file.</label>
+</div>
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="/groupA/A1-vibing">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="/groupA/A3-respects">Next →</a>
 </div>

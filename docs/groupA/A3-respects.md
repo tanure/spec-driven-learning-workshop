@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "A3: Copilot Actually Listens"
-lesson_id: A3
-group: A
-group_size: 5
-lesson_number: 3
-duration: 5
-prev: /groupA/A2-instructions
-next: /groupA/A4-agents
 ---
+
+<div class="lesson-badges"><span class="badge group-a">Group A</span><span class="badge-time">5 min</span></div>
+
+# A3: Copilot Actually Listens
 
 Now we prove that instructions work.
 
@@ -31,3 +27,8 @@ The response should align with your selected stack, validation style, and format
 </div>
 
 Instructions are usually the highest-impact setup step for AI-assisted development.
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="/groupA/A2-instructions">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="/groupA/A4-agents">Next →</a>
+</div>

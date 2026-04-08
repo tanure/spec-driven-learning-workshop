@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "B3: The Full Spec-Kit Journey"
-lesson_id: B3
-group: B
-group_size: 6
-lesson_number: 3
-duration: 20
-prev: /groupB/B2-writing-specs
-next: /groupB/B4-skills-specs
 ---
+
+<div class="lesson-badges"><span class="badge group-b">Group B</span><span class="badge-time">20 min</span></div>
+
+# B3: The Full Spec-Kit Journey
 
 This is the complete spec-kit flow you should practice during the workshop.
 
@@ -111,4 +107,9 @@ If prompted, create branch and begin coding with Copilot using your `.instructio
 <label><input type="checkbox" class="checkpoint-check"> I created Epic/Architecture with speckit spec.</label><br>
 <label><input type="checkbox" class="checkpoint-check"> I resolved at least one NEEDS CLARIFICATION item.</label><br>
 <label><input type="checkbox" class="checkpoint-check"> I reached tasks and start implementation steps.</label>
+</div>
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="./B2-writing-specs">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="./B4-skills-specs">Next →</a>
 </div>

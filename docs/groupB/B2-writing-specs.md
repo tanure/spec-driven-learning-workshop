@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "B2: Writing Real Specifications"
-lesson_id: B2
-group: B
-group_size: 6
-lesson_number: 2
-duration: 7
-prev: /groupB/B1-without-specs
-next: /groupB/B3-speckit-flow
 ---
+
+<div class="lesson-badges"><span class="badge group-b">Group B</span><span class="badge-time">7 min</span></div>
+
+# B2: Writing Real Specifications
 
 A good spec is a contract for what to build.
 
@@ -41,4 +37,9 @@ Rewrite your B1 shopping-cart idea as one feature spec:
 
 <div class="checkpoint">
 <label><input type="checkbox" class="checkpoint-check"> I wrote a concrete spec with measurable criteria.</label>
+</div>
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="./B1-without-specs">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="./B3-speckit-flow">Next →</a>
 </div>

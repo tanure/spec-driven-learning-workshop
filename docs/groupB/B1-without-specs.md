@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "B1: Coding Without a Map"
-lesson_id: B1
-group: B
-group_size: 6
-lesson_number: 1
-duration: 5
-prev:
-next: /groupB/B2-writing-specs
 ---
+
+<div class="lesson-badges"><span class="badge group-b">Group B</span><span class="badge-time">5 min</span></div>
+
+# B1: Coding Without a Map
 
 Before specs, teams often code based on assumptions.
 
@@ -34,4 +30,9 @@ Copilot starts coding, but key requirements are unclear: guest checkout, discoun
 
 <div class="checkpoint">
 <label><input type="checkbox" class="checkpoint-check"> I identified at least 5 unspecified assumptions.</label>
+</div>
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="./">Group Home</a>
+  <a id="next-btn" class="btn btn-primary" href="./B2-writing-specs">Next →</a>
 </div>

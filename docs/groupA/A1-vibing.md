@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "A1: The Vibing Trap"
-lesson_id: A1
-group: A
-group_size: 5
-lesson_number: 1
-duration: 5
-prev:
-next: /groupA/A2-instructions
 ---
+
+<div class="lesson-badges"><span class="badge group-a">Group A</span><span class="badge-time">5 min</span></div>
+
+# A1: The Vibing Trap
 
 Before we learn best practices, we intentionally experience vibing coding.
 
@@ -16,9 +12,9 @@ Before we learn best practices, we intentionally experience vibing coding.
 <strong>Bad Practice</strong><br>
 Ask Copilot the same request multiple times with no context:
 <ul>
-<li>"Write a login function" - gets one style</li>
-<li>Ask again - gets a different style</li>
-<li>Ask again - different assumptions and error handling</li>
+<li>"Write a login function" — gets one style</li>
+<li>Ask again — gets a different style</li>
+<li>Ask again — different assumptions and error handling</li>
 </ul>
 You spend time re-explaining instead of building.
 </div>
@@ -40,4 +36,9 @@ You spend time re-explaining instead of building.
 <div class="best-practice">
 <strong>Key insight</strong><br>
 Vibing can produce useful snippets, but it is not predictable for team delivery.
+</div>
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="./">Group Home</a>
+  <a id="next-btn" class="btn btn-primary" href="./A2-instructions">Next →</a>
 </div>

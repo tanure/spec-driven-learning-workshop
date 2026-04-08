@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "B4: Skills That Make Specs Smarter"
-lesson_id: B4
-group: B
-group_size: 6
-lesson_number: 4
-duration: 5
-prev: /groupB/B3-speckit-flow
-next: /groupB/B5-from-specs-to-code
 ---
+
+<div class="lesson-badges"><span class="badge group-b">Group B</span><span class="badge-time">5 min</span></div>
+
+# B4: Skills That Make Specs Smarter
 
 Skills can improve specification quality before planning.
 
@@ -35,4 +31,9 @@ Create <code>.github/skills/spec-clarify/SKILL.md</code> and run it against your
 
 <div class="checkpoint">
 <label><input type="checkbox" class="checkpoint-check"> I created and applied a spec-clarify skill.</label>
+</div>
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="./B3-speckit-flow">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="./B5-from-specs-to-code">Next →</a>
 </div>
