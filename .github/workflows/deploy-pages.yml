@@ -41,7 +41,7 @@ jobs:
       - name: Build with VitePress
         run: cd docs && npm run docs:build
         env:
-          BASE_URL: ${{ steps.pages.outputs.base_path }}/
+          BASE_URL: ${{ steps.pages.outputs.base_path == '/' && '/' || format('{0}/', steps.pages.outputs.base_path) }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

@@ -158,6 +158,6 @@
 }
 
 /* ── Home page feature cards — group color accents ──────────────────────── */
-.VPFeature:nth-child(1) .VPFeature .icon { color: #1e88e5; }
-.VPFeature:nth-child(2) .VPFeature .icon { color: #8e24aa; }
-.VPFeature:nth-child(3) .VPFeature .icon { color: #2e7d32; }
+.VPFeature:nth-child(1) .icon { color: #1e88e5; }
+.VPFeature:nth-child(2) .icon { color: #8e24aa; }
+.VPFeature:nth-child(3) .icon { color: #2e7d32; }

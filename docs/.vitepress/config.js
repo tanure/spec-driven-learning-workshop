@@ -1,10 +1,15 @@
 import { defineConfig } from 'vitepress'
 
+function normalizeBaseUrl(baseUrl) {
+  const normalized = `/${(baseUrl || '/').replace(/^\/+|\/+$/g, '')}/`.replace(/\/{2,}/g, '/')
+  return normalized === '//' ? '/' : normalized
+}
+
 export default defineConfig({
   title: 'Hackathon Learning Workshop',
   description:
     'A 90-minute journey through Copilot instructions, agents, skills, and spec-driven development.',
-  base: process.env.BASE_URL || '/',
+  base: normalizeBaseUrl(process.env.BASE_URL),
 
   themeConfig: {
     siteTitle: 'Hackathon Workshop',
