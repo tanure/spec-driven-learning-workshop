@@ -37,7 +37,7 @@ Define standards once in <code>.instructions.md</code>. Copilot loads them autom
 <div class="exercise">
 <strong>Try it now</strong>
 <ol>
-<li>Fork <code>hackathon-learning-starter</code>.</li>
+<li>Fork <code>spec-driven-learning-template</code>.</li>
 <li>Edit <code>.instructions.md</code> with your stack and style.</li>
 <li>Commit changes with message: <code>feat: configure project instructions</code>.</li>
 </ol>

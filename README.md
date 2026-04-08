@@ -23,7 +23,7 @@ Create this folder as its own repository, for example:
 - `hackathon-learning-workshop`
 
 Then set the paired starter repository URL in workshop content:
-- `https://github.com/YOUR-ORG/hackathon-learning-starter`
+- `https://github.com/YOUR-ORG/spec-driven-learning-template`
 
 ## Local Preview
 ```bash

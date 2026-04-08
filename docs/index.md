@@ -59,4 +59,4 @@ features:
 
 - [Quick Reference Cheatsheet](/resources/cheatsheet)
 - [FAQ and Troubleshooting](/resources/faq)
-- Starter template repository: `hackathon-learning-starter`
+- Starter template repository: `spec-driven-learning-template`
