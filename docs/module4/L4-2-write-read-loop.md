@@ -11,7 +11,7 @@ title: "L4.2: The Write-Read Loop"
 
 ## The Problem
 
-Your spec lives in `specification/`. Your team's tasks live in GitHub Issues. They're separate. When requirements change in GitHub, you have to remember to update the spec. When the spec updates, you have to remember to update the issue. Eventually they drift. Nobody knows which is authoritative.
+Your spec lives in `specs/<feature-branch>/`. Your team's tasks live in GitHub Issues. They're separate. When requirements change in GitHub, you have to remember to update the spec. When the spec updates, you have to remember to update the issue. Eventually they drift. Nobody knows which is authoritative.
 
 ## The Solution
 
@@ -33,25 +33,25 @@ Push from spec to GitHub. Implement from GitHub. The spec is written first, the 
 
 ## Exercise
 
-### Step 1 — Push an epic to GitHub Issues
+### Step 1 — Push a feature spec to GitHub Issues
 
 Open Copilot Chat in Agent Mode (with GitHub MCP active).
 
-Pick the epic from L3.2. Ask:
+Pick the feature spec from L3.2. Ask:
 
 ```
-Create a GitHub Issue for the following epic. 
-Use the epic title as the issue title.
+Create a GitHub Issue for the following feature specification. 
+Use the feature title as the issue title.
 Include the goal, acceptance criteria, and definition of done in the issue body.
 Format the acceptance criteria as a task list.
 
-[paste your epic content here]
+[paste your feature spec content here]
 ```
 
 - Expected result: Copilot creates a GitHub Issue in your repository. The issue body contains the goal, a checklist of AC items, and the DoD.
 - Why this matters: the issue is now the single place where stakeholders can see the work, comment on requirements, and track progress. It mirrors your spec exactly.
 
-Note the issue number (e.g., `#12`).
+Note the issue number (e.g., `#12`). This is the parent feature issue.
 
 ### Step 2 — Push your tasks to Issues
 
@@ -60,15 +60,15 @@ For each task in your task list, create a GitHub Issue:
 ```
 Create a GitHub Issue for the following task from the study planner spec.
 Title: [task title]
-Body: include the scope, definition of done, and link to the parent epic issue #[epic issue number].
+Body: include the scope, definition of done, and link to the parent feature issue #[feature issue number].
 
 [paste task content here]
 ```
 
 Run this for your first two tasks.
 
-- Expected result: two task issues created, each linking back to the parent epic issue.
-- Why this matters: the task issue is the unit of implementation. When you implement, you reference the task issue. When the task is done, you close the issue. The epic tracks its children.
+- Expected result: two task issues created, each linking back to the parent feature issue.
+- Why this matters: the task issue is the unit of implementation. When you implement, you reference the task issue. When the task is done, you close the issue. The parent feature issue tracks its children.
 
 ### Step 3 — Generate code from an issue
 
@@ -109,8 +109,8 @@ Write one sentence: what gets worse when you skip any step in this loop?
 
 ## Checkpoint
 
-- [ ] I pushed an epic to a GitHub Issue using Copilot + MCP
-- [ ] I pushed at least two tasks to GitHub Issues with links to the parent epic
+- [ ] I pushed a feature spec to a GitHub Issue using Copilot + MCP
+- [ ] I pushed at least two tasks to GitHub Issues with links to the parent feature issue
 - [ ] I generated code using a GitHub Issue number as the only context reference
 - [ ] I closed the task issue with an implementation comment after the Code Reviewer passed
 - [ ] I can explain the write-read loop and what breaks when a step is skipped

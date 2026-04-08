@@ -46,7 +46,7 @@ description: Runs the Code Reviewer agent on the most recently generated code
 You are running an automated code review step.
 
 Context: The developer just implemented a Task using Agent Mode. 
-Reference: specification/ for the task details and constants/constitution.md for standards.
+Reference: specs/<feature-branch>/tasks.md for the task details and memory/constitution.md for standards.
 
 Run the Code Reviewer agent on the changed files. 
 
@@ -74,15 +74,16 @@ Take one of the tasks you implemented earlier. Open the auto-review prompt from 
 
 Look at the full spec-driven workflow steps:
 
-1. Write epic
-2. `speckit plan`
-3. `speckit tasks`
-4. `speckit clarify` → answer
-5. Implement task
-6. Code Reviewer
-7. Mark done → next task
-8. Push to GitHub Issues
-9. Close issues on completion
+1. Draft feature spec
+2. `/speckit.specify`
+3. resolve `[NEEDS CLARIFICATION]` markers
+4. `/speckit.plan`
+5. `/speckit.tasks`
+6. Implement task
+7. Code Reviewer
+8. Mark done → next task
+9. Push to GitHub Issues
+10. Close issues on completion
 
 For each step, mark it as:
 - **Automate**: step is mechanical and low-risk (same output regardless of project)

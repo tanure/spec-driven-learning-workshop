@@ -27,7 +27,7 @@ Implement one task at a time. For each task:
 This loop produces code that is reviewed, scoped, and traceable to a specific spec requirement. It also produces a natural commit boundary: one task, one commit.
 
 ::: bad-practice
-Generating all tasks at once with a single prompt: "Implement the entire session tracking epic." Copilot will attempt to build everything, make integration decisions without spec guidance, and produce a diff that is too large to meaningfully review.
+Generating all tasks at once with a single prompt: "Implement the entire session tracking feature." Copilot will attempt to build everything, make integration decisions without spec guidance, and produce a diff that is too large to meaningfully review.
 :::
 
 ::: best-practice
@@ -44,7 +44,7 @@ Pick the first task from your task list. Paste its content into the prompt, prec
 
 ```
 Implement the following task from the study planner spec.
-Reference: specification/constitution.md for stack and conventions.
+Reference: memory/constitution.md for stack and conventions.
 
 [paste task content here]
 ```

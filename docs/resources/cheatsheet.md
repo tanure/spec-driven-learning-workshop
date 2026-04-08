@@ -7,20 +7,20 @@ title: Quick Reference Cheatsheet
 ## The Spec-Driven Workflow
 
 ```
-Constitution → Epic (goal + AC + DoD) → speckit plan → speckit tasks
-→ speckit clarify → Task-by-task: Agent Mode → Code Reviewer → mark done
+Constitution → /speckit.specify → resolve [NEEDS CLARIFICATION] markers
+→ /speckit.plan → /speckit.tasks → Task-by-task: Agent Mode → Code Reviewer → mark done
 → Push to GitHub Issues (MCP) → Generate from Issue
 ```
 
-## spec-kit Commands
+## spec-kit Slash Commands
+
+Use these in Copilot Chat in VS Code, not in the terminal.
 
 | Command | Purpose |
 |---------|---------|
-| `speckit init` | Initialize `specification/` directory in project |
-| `speckit epic "<title>"` | Scaffold an epic file |
-| `speckit plan` | Generate implementation plan from epic |
-| `speckit tasks` | Break plan into atomic tasks |
-| `speckit clarify` | Surface ambiguities in the current spec |
+| `/speckit.specify <feature description>` | Create a numbered feature branch and `specs/<feature-branch>/spec.md` |
+| `/speckit.plan <implementation direction>` | Generate `plan.md` plus supporting design docs from the feature spec |
+| `/speckit.tasks` | Generate `tasks.md` from `plan.md` and related design documents |
 
 ## File Locations
 
@@ -31,15 +31,15 @@ Constitution → Epic (goal + AC + DoD) → speckit plan → speckit tasks
 | Agent | `.github/agents/<name>.agent.md` | Specialized Copilot persona |
 | Prompt | `.github/prompts/<name>.prompt.md` | Reusable prompt workflow |
 | MCP config | `.vscode/mcp.json` | MCP server configuration |
-| Constitution | `specification/constitution.md` | Project-wide decisions and values |
-| Epic | `specification/<epic-name>.md` | Feature goal, AC, DoD |
-| Plan | `specification/plan.md` | Ordered implementation phases |
-| Tasks | `specification/tasks/` or `specification/tasks.md` | Atomic implementation units |
+| Constitution | `memory/constitution.md` | Project-wide decisions and values |
+| Feature spec | `specs/<feature-branch>/spec.md` | Feature goal, AC, DoD, clarifications |
+| Plan | `specs/<feature-branch>/plan.md` | Ordered implementation phases |
+| Tasks | `specs/<feature-branch>/tasks.md` | Atomic implementation units |
 
-## Epic Template
+## Feature Spec Template
 
 ```markdown
-# Epic: [Feature Name]
+# Feature Specification: [Feature Name]
 
 ## Goal
 [One sentence: what will the user be able to do when this is done]

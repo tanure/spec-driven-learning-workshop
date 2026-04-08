@@ -22,7 +22,7 @@ Waiting until you're starting a real project to figure out how to adapt the work
 :::
 
 ::: best-practice
-Pick the template closest to your next real project now. Sketch its constitution and first epic. You don't have to finish — you need to discover where the workflow fits naturally and where you have to adapt.
+Pick the template closest to your next real project now. Sketch its constitution and first feature spec. You don't have to finish — you need to discover where the workflow fits naturally and where you have to adapt.
 :::
 
 ## Templates
@@ -44,7 +44,7 @@ Stack: [your choice]
 Out of scope: Social features, content hosting, exam simulation.
 ```
 
-**First epic idea**: Import exam objectives from a structured text format (CSV or JSON), display them grouped by domain, mark individual objectives as studied.
+**First feature spec idea**: Import exam objectives from a structured text format (CSV or JSON), display them grouped by domain, mark individual objectives as studied.
 
 **Differentiating AC to write**:
 - [ ] Objectives display with domain grouping and progress percentage per domain
@@ -71,7 +71,7 @@ Out of scope: Team features, integrations during initial build,
 AI-generated journal entries.
 ```
 
-**First epic idea**: Daily entry form with task list + optional blocker note + mood rating (1–5), stored with date.
+**First feature spec idea**: Daily entry form with task list + optional blocker note + mood rating (1–5), stored with date.
 
 **Differentiating AC to write**:
 - [ ] Entry for today can be created, edited, and saved within a single screen
@@ -97,7 +97,7 @@ Stack: [your choice]
 Out of scope: Video integration, anonymous voting, enterprise auth.
 ```
 
-**First epic idea**: Create a retro session with a name and expiry time. Participants add cards to three columns: Went Well, Improve, Action Items.
+**First feature spec idea**: Create a retro session with a name and expiry time. Participants add cards to three columns: Went Well, Improve, Action Items.
 
 **Differentiating AC to write**:
 - [ ] Session expires at the configured time; expired sessions are read-only
@@ -119,15 +119,15 @@ Use this on the first 30 minutes of any new spec-driven project:
 - [ ] Stack decisions locked
 - [ ] Top 3 out-of-scope items identified
 
-### First Epic (15 min)
+### First Feature Spec (15 min)
 - [ ] Feature selected (not the whole product — one slice)
 - [ ] One-sentence goal written
 - [ ] AC written (minimum 4, all verifiable from outside)
-- [ ] Out-of-scope items for this epic (minimum 2)
+- [ ] Out-of-scope items for this feature (minimum 2)
 - [ ] Definition of done with at least one non-trivial criterion
 
 ### Tools Setup (5 min)
-- [ ] `speckit init` run
+- [ ] `/speckit.specify <feature description>` run in Copilot Chat
 - [ ] `.github/copilot-instructions.md` created
 - [ ] Code Reviewer agent created
 - [ ] GitHub MCP configured (if using GitHub Issues)
@@ -137,20 +137,20 @@ Use this on the first 30 minutes of any new spec-driven project:
 
 Pick one of the three templates (or your own next project). Using the kickoff checklist, complete:
 - A constitution
-- One first epic with full AC
+- One first feature spec with full AC
 
 **Time target**: 20 minutes.
 
 This is not a throwaway exercise. If you pick your real next project, you leave this workshop with the first spec already written.
 
-- Expected result: completed constitution + first epic for a project you will actually build.
+- Expected result: completed constitution + first feature spec for a project you will actually build.
 - Why this matters: a spec you wrote for a real project is immediately more valuable than workshop notes you might read later.
 
 ## Checkpoint
 
 - [ ] I reviewed all three templates and identified which is closest to my next real project
 - [ ] I completed the kickoff checklist for a real (or the template) project
-- [ ] I have a constitution and first epic ready to use
+- [ ] I have a constitution and first feature spec ready to use
 - [ ] I can walk someone through the kickoff checklist in under 30 minutes
 
 ---

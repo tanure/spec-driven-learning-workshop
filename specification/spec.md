@@ -532,8 +532,8 @@ By the end of M3, participants will:
 | L3.1 | Cost of No Specs + spec-kit Setup | ~7 min | Context-setter (for jump-in) + install and configure spec-kit |
 | L3.2 | Writing Specs — The Constitution | ~5 min | spec-kit native structure; drafting a Constitution |
 | L3.3 | The spec-kit Workflow | ~10 min | Full lifecycle hands-on: Constitution → Epic → Plan → Tasks → Implement |
-| L3.4 | The Clarification Step | ~4 min | Built-in spec-kit clarification; run → read → resolve → record |
-| L3.5 | From Spec to Code | ~4 min | speckit implement + Agent Mode + Code Reviewer agent |
+| L3.4 | The Clarification Step | ~4 min | Resolve `[NEEDS CLARIFICATION]` markers before planning and coding |
+| L3.5 | From Spec to Code | ~4 min | Task-by-task implementation with Agent Mode + Code Reviewer agent |
 
 **Total: ~30 min — 5 lessons**
 
@@ -558,15 +558,15 @@ By the end of M3, participants will:
    ```
    Expected result: `speckit` command is available. Verify with `speckit --version`.
 
-2. Initialize spec-kit in the study planner repository:
-   ```bash
-   speckit init
+2. Create the first feature spec in Copilot Chat in the study planner repository:
+   ```text
+   /speckit.specify Add study session tracking
    ```
-   Expected result: a `specification/` directory is created with a starter `spec.md` file.
+   Expected result: a numbered feature branch is created and `specs/<feature-branch>/spec.md` is generated.
 
-3. Confirm the initialization was successful by opening `specification/spec.md` and verifying its contents match the spec-kit starter template.
+3. Confirm the generation was successful by opening `specs/<feature-branch>/spec.md` and verifying its contents match the spec-kit feature template.
 
-> **NEEDS CLARIFICATION**: Verify exact install command (`@github/spec-kit` vs `spec-kit` vs another package name) and exact init command. Confirm what files `speckit init` creates. Resolve before writing L3.1 lesson file.
+> Resolved: the documented command flow starts with `/speckit.specify`, not `speckit init`.
 
 **Expected output**: spec-kit installed and scaffolded in the study planner repository. Participant is ready to write their first Constitution.
 
@@ -585,16 +585,16 @@ By the end of M3, participants will:
 - **Task** — an atomic, implementable unit produced from running the spec-kit plan command.
 
 **Exercise**:
-1. Open `specification/spec.md` (created by `speckit init`).
+1. Open `memory/constitution.md` (create it if it does not yet exist in the repo).
 2. Fill in the Constitution section for the study planner:
    - Project name and one-sentence goal.
    - Tech stack (TypeScript, Node.js, or as appropriate).
    - At least 2 non-negotiable principles (e.g., "All features must have tests", "No external APIs without explicit approval").
 3. Save and review — the Constitution is now the anchor for the full L3.3 workflow.
 
-> **NEEDS CLARIFICATION**: Verify exact spec-kit markdown format and required sections for Constitution, Epic, Feature, and Task. Confirm whether `speckit init` pre-populates headings/frontmatter or creates an empty file. Resolve before writing L3.2 lesson file.
+2. Draft the project constitution there so `/speckit.plan` has a project-wide architectural anchor.
 
-**Expected output**: A completed Constitution section in `specification/spec.md` for the study planner project.
+**Expected output**: A completed constitution in `memory/constitution.md` for the study planner project.
 
 ---
 
@@ -607,57 +607,54 @@ By the end of M3, participants will:
 **Full workflow — all steps are mandatory**:
 
 1. **Constitution** — already drafted in L3.2. Use it as the anchor.
-   - Expected result: `specification/spec.md` has a complete Constitution section.
+   - Expected result: `memory/constitution.md` has a complete Constitution section.
    - Meaning: every downstream artifact is consistent with this agreement.
 
-2. **Epic** — create an Epic for the study planner:
-   ```bash
-   speckit epic "Progress Tracking Feature"
+2. **Feature spec** — create a feature specification for the study planner in Copilot Chat:
+   ```text
+   /speckit.specify Progress Tracking Feature
    ```
-   Expected result: an Epic file is created under `specification/` linked to the Constitution.
+   Expected result: `specs/<feature-branch>/spec.md` is created and linked to the Constitution through the planning workflow.
    Meaning: the work is scoped to a named deliverable, not a vague goal.
 
-3. **Plan** — break the Epic into Features:
-   ```bash
-   speckit plan
+3. **Plan** — break the feature spec into implementation phases from Copilot Chat:
+   ```text
+   /speckit.plan File-based progress tracking with explicit completion rules
    ```
-   Expected result: a set of Feature definitions is generated under the Epic.
+   Expected result: `plan.md` and supporting design docs are generated under `specs/<feature-branch>/`.
    Meaning: the AI has proposed a work breakdown; participants review and accept or edit before moving forward.
 
-4. **Tasks** — generate atomic, implementable tasks from the Features:
-   ```bash
-   speckit tasks
+4. **Tasks** — generate atomic, implementable tasks from the plan from Copilot Chat:
+   ```text
+   /speckit.tasks
    ```
-   Expected result: a `tasks.md` (or equivalent) is created with individual tasks, each with a clear scope.
+   Expected result: `specs/<feature-branch>/tasks.md` is created with individual tasks, each with a clear scope.
    Meaning: tasks are now ready to hand to Copilot Agent Mode one at a time.
 
 5. **Implement** — run the first task through spec-to-code (handled in L3.5).
    - At this step: confirm the task list is complete and at least one task is selected for L3.5.
 
-> **NEEDS CLARIFICATION**: Verify exact command names for `speckit epic`, `speckit plan`, `speckit tasks`. Confirm output file paths and formats. Resolve before writing L3.3 lesson file.
+> Resolved: the documented workflow uses `/speckit.specify`, `/speckit.plan`, and `/speckit.tasks` with output under `specs/<feature-branch>/`.
 
-**Expected output**: Participants have run all 5 steps at least once and have a complete spec-kit artifact set (Constitution, Epic, Features, Tasks) for the study planner project.
+**Expected output**: Participants have run all 5 steps at least once and have a complete spec-kit artifact set (Constitution, feature spec, plan, tasks) for the study planner project.
 
 ---
 
 ### L3.4 — The Clarification Step: Lesson Details
 
-**Objective**: Run spec-kit's built-in clarification step to identify and resolve ambiguities in the spec before implementation.
+**Objective**: Resolve ambiguities in the spec before implementation by using the documented `[NEEDS CLARIFICATION]` marker pattern.
 
 **Time**: ~4 min
 
 **How clarification works**:
-- The clarification step is **automatic and built into spec-kit** — it is not a manual annotation pattern.
-- spec-kit analyzes the spec artifacts and flags items that are ambiguous, underspecified, or contradictory.
-- Participants do not need to write `:::needs-clarification:::` blocks manually.
+- The spec template uses `[NEEDS CLARIFICATION: ...]` markers to make ambiguity explicit.
+- Participants must resolve those markers before planning and implementation, or explicitly defer them as open questions.
+- The goal is to avoid silent guessing by the model.
 
 **Exercise workflow** — run → read → resolve → record:
 
-1. **Run** the clarification step:
-   ```bash
-   speckit clarify
-   ```
-   Expected result: a list of flagged items is output, each with a short explanation of why it needs clarification.
+1. **Review** the generated spec and locate every `[NEEDS CLARIFICATION: ...]` marker.
+   Expected result: a list of flagged items is visible in the spec itself, each with a short explanation of what is missing.
 
 2. **Read** each flagged item and understand what is underspecified.
 
@@ -665,7 +662,7 @@ By the end of M3, participants will:
 
 4. **Record** the decision back in the spec — update the relevant section so the ambiguity is gone.
 
-> **NEEDS CLARIFICATION**: Verify exact clarification command name (`speckit clarify` vs `speckit review` vs agent-invoked). Confirm whether output is printed to terminal, written to a file, or both. Resolve before writing L3.4 lesson file.
+> Resolved: `spec-driven.md` documents clarification through `[NEEDS CLARIFICATION: ...]` markers in the spec template, not through a separate `speckit clarify` command.
 
 **Expected output**: Participants have run the clarification step, identified at least one ambiguity in their study planner spec, and resolved it.
 
@@ -673,32 +670,24 @@ By the end of M3, participants will:
 
 ### L3.5 — From Spec to Code: Lesson Details
 
-**Objective**: Implement one study planner task from the spec-kit task list using speckit implement, Copilot Agent Mode, and the Code Reviewer agent from M2.
+**Objective**: Implement one study planner task from the spec-kit task list using Copilot Agent Mode and the Code Reviewer agent from M2.
 
 **Time**: ~4 min
 
 **Three-step implementation flow** — all steps are mandatory:
 
-1. **Run speckit implement** to begin a task:
-   ```bash
-   speckit implement
-   ```
-   Expected result: spec-kit activates the selected task and provides its context to Copilot.
-
-   > **NEEDS CLARIFICATION**: Verify exact command: `speckit implement`, `speckit start`, `speckit run`, or other. Confirm whether the command opens Agent Mode automatically or requires manual switch. Resolve before writing L3.5 lesson file.
-
-2. **Implement using Copilot Agent Mode** with the task spec as context:
+1. **Implement using Copilot Agent Mode** with the task spec as context:
    - Switch to Copilot Agent Mode if not already active.
-   - The task spec (from spec-kit) is the only context — do not add extra prompts.
+   - The task spec from `specs/<feature-branch>/tasks.md` plus `memory/constitution.md` is the implementation context.
    - Let Agent Mode execute the implementation. Review each file change before accepting.
    - Expected result: the task is implemented across the relevant study planner files.
 
-3. **Run the Code Reviewer agent** (created in M2) to validate the output:
+2. **Run the Code Reviewer agent** (created in M2) to validate the output:
    - Invoke the Code Reviewer agent on the changed files.
    - Review its feedback and address any blocking issues before accepting the implementation.
    - Expected result: implementation passes Code Reviewer review.
 
-**Future extension (not in M3 scope)**: The Code Reviewer agent can be wired into spec-kit automatically via GitHub MCP so it runs after each `speckit implement` invocation without manual invocation. This is covered in M4 or as a post-workshop extension.
+**Future extension (not in M3 scope)**: The Code Reviewer agent can be wired into the surrounding workflow automatically so it runs after each task implementation without manual invocation. This is covered in M4 or as a post-workshop extension.
 
 **Expected output**: One study planner task implemented from spec, reviewed by the Code Reviewer agent, and committed to the repository.
 
@@ -711,9 +700,9 @@ At the end of M3, participants must have all of the following:
 | Artifact | Description | Status |
 |----------|-------------|--------|
 | spec-kit installed | `speckit --version` succeeds | Done |
-| Constitution | Drafted in `specification/spec.md` | Done |
-| Epic | Created via `speckit epic` | Done |
-| Features + Tasks | Generated via `speckit plan` + `speckit tasks` | Done |
+| Constitution | Drafted in `memory/constitution.md` | Done |
+| Feature spec | Created via `/speckit.specify` | Done |
+| Plan + Tasks | Generated via `/speckit.plan` + `/speckit.tasks` | Done |
 | Clarification run | At least 1 ambiguity resolved | Done |
 | Implemented task | One task completed with Agent Mode + Code Reviewer | Done |
 
@@ -861,11 +850,11 @@ M5 is a **bonus/advanced module** with flexible timing. It is the last module in
 
 **Simulation workflow** — each step has an expected result and rationale:
 
-1. **Spec** — confirm the study planner has a complete spec-kit Constitution and at least one Epic in `specification/`.
-   - Expected result: `specification/spec.md` exists with a filled Constitution.
+1. **Spec** — confirm the study planner has a complete constitution in `memory/constitution.md` and at least one feature spec in `specs/`.
+   - Expected result: `memory/constitution.md` exists and `specs/<feature-branch>/spec.md` is filled out.
    - How this reduces chaos: everyone working on the project starts from the same agreement.
 
-2. **Plan** — run `speckit plan` and confirm Features and Tasks are up to date.
+2. **Plan** — run `/speckit.plan` and `/speckit.tasks` and confirm the plan and tasks are up to date.
    - Expected result: tasks list reflects the current Epic.
    - How this increases confidence: the AI has a work breakdown, not a vague directive.
 
@@ -873,7 +862,7 @@ M5 is a **bonus/advanced module** with flexible timing. It is the last module in
    - Expected result: one task is identified and its spec is clear.
    - How this reduces chaos: scope is explicit — one thing at a time.
 
-4. **Implement** — run `speckit implement` and use Copilot Agent Mode to execute the task.
+4. **Implement** — use Copilot Agent Mode to execute the selected task from `tasks.md`.
    - Expected result: task is implemented and diff is staged.
    - How this increases confidence: implementation is driven by spec, not by prompt instinct.
 
@@ -910,7 +899,7 @@ For the chosen template, define and write down:
 
 **Hands-on requirement**: Participants must select a template, complete all four checklist items in writing, and confirm their kickoff is ready to hand to spec-kit (i.e., the first objective and feature scope are specific enough to become a Constitution + Epic).
 
-**Expected output**: One template selected, kickoff checklist completed, ready to run `speckit init` on the new project.
+**Expected output**: One template selected, kickoff checklist completed, ready to run `/speckit.specify` on the new project.
 
 ---
 
@@ -923,15 +912,15 @@ For the chosen template, define and write down:
 **Progressive path — two levels**:
 
 **Level 1 — Baseline automation (mandatory for this lesson)**:
-- Configure the Code Reviewer agent to run automatically after each `speckit implement` completes.
-- Implementation: add a VS Code task or Copilot instruction that triggers the Code Reviewer on the most recently changed files after any `speckit implement` invocation.
+- Configure the Code Reviewer agent to run automatically after each task implementation completes.
+- Implementation: add a VS Code task or Copilot instruction that triggers the Code Reviewer on the most recently changed files after any task implementation invocation.
 - Expected outcome: Code Reviewer runs without manual invocation after every implementation step.
 
 **Level 2 — Advanced extension (optional)**:
 - Extend the automation loop to include:
   - After implementation → auto Code Reviewer review.
   - After review passes → auto update the linked GitHub Issue status via MCP (mark as "In Review" or close).
-  - After Issue update → traceability log appended to `specification/` showing the spec → task → implementation → review chain.
+   - After Issue update → traceability log appended to `specs/<feature-branch>/` showing the spec → task → implementation → review chain.
 - Expected outcome: the full loop from spec artifact to GitHub Issue to implementation to review to traceability is automated.
 
 **Mandatory vs Optional**:

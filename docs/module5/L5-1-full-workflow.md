@@ -20,11 +20,11 @@ Run the full spec-driven cycle on a new feature. Unassisted. Time it.
 The workflow you'll run:
 
 ```
-Add feature to spec (constitution stays) →
-Write epic with AC and DoD →
-speckit plan →
-speckit tasks →
-speckit clarify → resolve →
+Update constitution if needed →
+/speckit.specify →
+resolve [NEEDS CLARIFICATION] markers →
+/speckit.plan →
+/speckit.tasks →
 Implement task 1 → Code Reviewer → mark done →
 Implement task 2 → Code Reviewer → mark done →
 Push to GitHub Issues → generate from Issue →
@@ -51,15 +51,21 @@ This is a new feature — not one you've built yet. Run the full workflow on it.
 
 ### Step 1 — Update the constitution (if needed)
 
-Does "archiving" change any project-wide decisions? If yes, update `specification/constitution.md`. If no, note why not.
+Does "archiving" change any project-wide decisions? If yes, update `memory/constitution.md`. If no, note why not.
 
 **Time target**: 2 minutes.
 
 ---
 
-### Step 2 — Write the epic
+### Step 2 — Create the feature spec
 
-Write the epic for topic archiving:
+In Copilot Chat, enter:
+
+```text
+/speckit.specify Topic archiving for the study planner
+```
+
+Then refine the generated `specs/<feature-branch>/spec.md` so it contains:
 - One-sentence goal
 - Acceptance criteria (at least 4, all verifiable)
 - Out-of-scope items (at least 2)
@@ -71,9 +77,11 @@ Write the epic for topic archiving:
 
 ### Step 3 — Plan and task breakdown
 
-```bash
-speckit plan
-speckit tasks
+In Copilot Chat, enter these slash commands in sequence:
+
+```text
+/speckit.plan File-based archiving, no soft-delete database layer
+/speckit.tasks
 ```
 
 Review the output. Edit anything that's wrong. 
@@ -84,11 +92,7 @@ Review the output. Edit anything that's wrong.
 
 ### Step 4 — Clarification pass
 
-```bash
-speckit clarify
-```
-
-Answer or defer all questions.
+Review the generated spec and resolve or defer every `[NEEDS CLARIFICATION: ...]` marker before implementation.
 
 **Time target**: 2 minutes.
 
@@ -122,7 +126,7 @@ Write these as three sentences. Keep them.
 ## Checkpoint
 
 - [ ] I completed all 6 steps of the simulation without skipping
-- [ ] I have an epic, plan, tasks, and clarification pass for topic archiving
+- [ ] I have a feature spec, plan, tasks, and clarification pass for topic archiving
 - [ ] I implemented two tasks with Code Reviewer on each
 - [ ] I wrote the three comparison sentences
 - [ ] I can run the spec-driven workflow end-to-end from memory

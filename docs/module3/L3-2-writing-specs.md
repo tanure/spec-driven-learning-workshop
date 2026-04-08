@@ -19,16 +19,16 @@ A good spec is not a requirements document. It's a communication artifact that a
 
 A spec that guides AI generation has three components:
 
-**1. A constitution** — what the project is, what it values, what it will never do. Written once. Referenced by all epics.
+**1. A constitution** — what the project is, what it values, what it will never do. Written once. Referenced by all feature plans.
 
-**2. An epic** — a feature or slice of work with:
+**2. A feature spec** — a feature or slice of work with:
 - A one-sentence goal
 - Acceptance criteria (what the user can do when it's done)
-- Out-of-scope items (what this epic explicitly does not include)
+- Out-of-scope items (what this feature explicitly does not include)
 
-**3. Tasks** — atomic units of implementation derived from the epic. Each task has a clear scope and a definition of done.
+**3. Tasks** — atomic units of implementation derived from the plan. Each task has a clear scope and a definition of done.
 
-The constitution prevents drift. The epic prevents scope creep. The tasks prevent ambiguity during generation.
+The constitution prevents drift. The feature spec prevents scope creep. The tasks prevent ambiguity during generation.
 
 ::: bad-practice
 Writing acceptance criteria like: "The progress feature should work correctly and show the user's progress." This has three words doing no work: "correctly", "show", and "progress" are all undefined. Copilot will choose a definition.
@@ -42,7 +42,7 @@ Writing acceptance criteria like: "When a user marks a topic as complete, the pr
 
 ### Step 1 — Draft the project constitution
 
-Open `specification/constitution.md` (or create it if spec-kit didn't scaffold it).
+Open `memory/constitution.md` (or create it if your repo does not already have one).
 
 Write your constitution for the study planner using this structure:
 
@@ -71,21 +71,21 @@ A single-user study planner that tracks topics, completion status, and daily pro
 
 Customize the content to match what you've been building. The structure matters more than these specific words.
 
-- Expected result: `specification/constitution.md` contains a complete constitution with all four sections.
-- Why this matters: every epic you write will reference this constitution. It prevents you from writing an epic that contradicts the project's core decisions.
+- Expected result: `memory/constitution.md` contains a complete constitution with all four sections.
+- Why this matters: `/speckit.plan` uses the project constitution as an architectural anchor. It prevents you from creating a plan that contradicts the project's core decisions.
 
-### Step 2 — Write an epic
+### Step 2 — Write a feature spec
 
-Use spec-kit to scaffold an epic:
+Use spec-kit in Copilot Chat to scaffold the feature spec. Enter this in chat, not in the terminal:
 
-```bash
-speckit epic "Add study session tracking"
+```text
+/speckit.specify Add study session tracking
 ```
 
-This creates a new epic file in `specification/`. Open it and fill in the structure:
+This creates a new feature spec in `specs/<feature-branch>/spec.md`. Open that file and fill in the structure:
 
 ```markdown
-# Epic: Add Study Session Tracking
+# Feature Specification: Add Study Session Tracking
 
 ## Goal
 Allow users to log study sessions with a start time, duration, and linked topic,
@@ -109,8 +109,8 @@ so they can see their total time invested per topic.
 - No TypeScript errors
 ```
 
-- Expected result: the epic file is complete with goal, AC, out-of-scope, and DoD.
-- Why this matters: the AC list is what the Code Reviewer and Testing Advocate in M2 will verify against. The DoD is what "done" means — no ambiguity.
+- Expected result: the feature spec is complete with goal, AC, out-of-scope, and DoD.
+- Why this matters: `/speckit.plan` translates this spec into the technical plan, contracts, and tasks. The DoD is what "done" means — no ambiguity.
 
 ### Step 3 — Verify the spec is AI-ready
 
@@ -124,9 +124,9 @@ If the answer is no, rewrite that criterion until the answer is yes.
 ## Checkpoint
 
 - [ ] I wrote a constitution with: what the project is, core values, stack decisions, and out-of-scope
-- [ ] I created an epic with: goal, acceptance criteria (each verifiable), out-of-scope, and definition of done
+- [ ] I created a feature spec with: goal, acceptance criteria (each verifiable), out-of-scope, and definition of done
 - [ ] I reviewed every AC item and confirmed each is verifiable without needing interpretation
-- [ ] I understand the three-level structure: constitution → epic → tasks
+- [ ] I understand the three-level structure: constitution → feature spec → tasks
 
 ---
 

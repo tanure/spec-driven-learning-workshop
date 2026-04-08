@@ -35,7 +35,7 @@ Run the fixed prompt. Record exactly what you got, what was missing, and how con
 
 1. Open VS Code in a new or empty workspace.
 2. Open GitHub Copilot Chat. Switch to **Agent Mode**.
-3. Confirm: no custom instructions file, no custom agents loaded, no `specification/` files open.
+3. Confirm: no custom instructions file, no custom agents loaded, no `specs/` files or `memory/constitution.md` open.
    - Expected result: plain default Copilot with no project context.
    - Why this matters: you are replicating the vibing starting condition — no setup, just a prompt.
 

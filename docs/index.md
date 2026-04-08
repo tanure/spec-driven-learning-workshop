@@ -29,7 +29,7 @@ features:
     linkText: Start M2
   - icon: 📋
     title: M3 — Spec-Driven Development
-    details: Replace open-ended prompts with a constitution → epic → plan → tasks → code workflow.
+    details: Replace open-ended prompts with a constitution → feature spec → plan → tasks → code workflow.
     link: /module3/
     linkText: Start M3
   - icon: 🔗

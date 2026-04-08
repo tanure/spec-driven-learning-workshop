@@ -11,14 +11,14 @@ title: "L3.3: The Spec-Kit Workflow"
 
 ## The Problem
 
-You have an epic. You can't generate all of it at once — Copilot doesn't have unlimited context, and a full feature implemented in a single prompt is a recipe for tangled, hard-to-review code. You need a way to break the epic into tasks that are small enough to generate individually, coherent enough to integrate, and specific enough that "done" is unambiguous.
+You have a feature specification. You can't generate all of it at once — Copilot doesn't have unlimited context, and a full feature implemented in a single prompt is a recipe for tangled, hard-to-review code. You need a way to break the feature into tasks that are small enough to generate individually, coherent enough to integrate, and specific enough that "done" is unambiguous.
 
 ## The Solution
 
-Spec-kit automates the epic → plan → tasks breakdown. The workflow is:
+Spec-kit automates the feature spec → plan → tasks breakdown. The workflow is:
 
-1. **`speckit plan`** — Analyzes the epic and generates an implementation plan: ordered phases, dependencies, and implementation strategy.
-2. **`speckit tasks`** — Breaks the plan into atomic tasks. Each task has a scope boundary and a DoD.
+1. **`/speckit.plan`** — Analyzes the feature spec and generates an implementation plan: ordered phases, dependencies, technical translation, and supporting design documents.
+2. **`/speckit.tasks`** — Breaks the plan into atomic tasks. Each task has a scope boundary and a DoD.
 
 The output is a task list you can hand directly to Agent Mode. No more open-ended prompts.
 
@@ -27,30 +27,30 @@ Generating the implementation plan in chat, accepting Copilot's breakdown withou
 :::
 
 ::: best-practice
-Run `speckit plan` to generate the plan, review it against your epic, edit anything that doesn't match your intent, then run `speckit tasks`. Treat the generated plan as a draft, not a final decision.
+Run `/speckit.plan` to generate the plan, review it against your feature spec, edit anything that doesn't match your intent, then run `/speckit.tasks`. Treat the generated plan as a draft, not a final decision.
 :::
 
 ## Exercise
 
 ### Step 1 — Generate the implementation plan
 
-In your terminal, run:
+In Copilot Chat, enter:
 
-```bash
-speckit plan
+```text
+/speckit.plan WebSocket for session updates, file-based storage for persistence
 ```
 
-Spec-kit reads your epic and constitution, then generates a plan in `specification/plan.md`.
+Spec-kit reads your feature spec and constitution, then generates an implementation bundle in `specs/<feature-branch>/`.
 
-- Expected result: `specification/plan.md` exists with ordered implementation phases.
+- Expected result: `specs/<feature-branch>/plan.md` exists along with supporting documents such as `research.md`, `data-model.md`, `contracts/`, and `quickstart.md` where applicable.
 - Why this matters: the plan exposes implicit ordering dependencies. If "session list UI" appears before "session storage", that's wrong — storage must come first.
 
 ### Step 2 — Review and edit the plan
 
-Open `specification/plan.md`. Check:
+Open `specs/<feature-branch>/plan.md`. Check:
 
 1. Are the phases in the right order? (Data model before storage, storage before UI.)
-2. Does the plan include anything that's in your epic's "out of scope" section? Remove it.
+2. Does the plan include anything that's in your feature spec's "out of scope" section? Remove it.
 3. Are there phases that are too large? (A phase that says "implement everything" is not a phase.) Break them down.
 
 Edit `plan.md` directly until you're satisfied.
@@ -60,11 +60,13 @@ Edit `plan.md` directly until you're satisfied.
 
 ### Step 3 — Generate tasks from the plan
 
-```bash
-speckit tasks
+In Copilot Chat, enter:
+
+```text
+/speckit.tasks
 ```
 
-Spec-kit reads the plan and generates task files in `specification/tasks/` or inline in a `tasks.md`.
+Spec-kit reads the plan and related design documents and generates `specs/<feature-branch>/tasks.md`.
 
 - Expected result: a set of tasks, each with a clear scope and a definition of done.
 - Why this matters: these tasks are the input to Agent Mode in L3.5. Each task generates one focused implementation — not a sprawling feature.
@@ -84,11 +86,11 @@ Edit any tasks that fail these checks.
 
 ## Checkpoint
 
-- [ ] I ran `speckit plan` and have a `plan.md` with ordered phases
+- [ ] I ran `/speckit.plan` and have a `plan.md` with ordered phases
 - [ ] I reviewed and edited the plan to remove out-of-scope items and fix ordering
-- [ ] I ran `speckit tasks` and have a task list derived from the plan
+- [ ] I ran `/speckit.tasks` and have a task list derived from the plan
 - [ ] I verified each task is atomic, has a verifiable DoD, and does not encode implementation details
-- [ ] I understand the full epic → plan → tasks breakdown
+- [ ] I understand the full feature spec → plan → tasks breakdown
 
 ---
 

@@ -58,16 +58,16 @@ speckit --version
 
 > **Note**: If `@github/spec-kit` is not yet available, check the [spec-kit repository](https://github.com/github/spec-kit) for the correct package name or install instructions. The package may be published under a different name.
 
-### Step 2 — Initialize spec-kit in your project
+### Step 2 — Create your first feature spec
 
-In your project root:
+Open Copilot Chat in VS Code and enter this slash command there. Do not run it in the terminal.
 
-```bash
-speckit init
+```text
+/speckit.specify Add study session tracking
 ```
 
-- Expected result: spec-kit creates a `specification/` directory with a `spec.md` file and a `constitution.md` scaffold.
-- Why this matters: you now have the standard directory structure for spec-driven development. All specs, epics, and tasks will live here.
+- Expected result: spec-kit creates a new feature branch and a `specs/<feature-branch>/spec.md` file populated from the feature-spec template.
+- Why this matters: this is the documented entry point for the workflow. You start from a feature specification, not from a custom `init` scaffold.
 
 ### Step 3 — Calculate your rework estimate
 
@@ -86,7 +86,7 @@ Write a single sentence: `In my L1.1 runs, approximately __% of generated code w
 ## Checkpoint
 
 - [ ] I installed spec-kit and confirmed the version
-- [ ] I initialized spec-kit and have a `specification/` directory
+- [ ] I ran `/speckit.specify` and have a generated `specs/<feature-branch>/spec.md`
 - [ ] I estimated the rework percentage from my L1.1 runs
 - [ ] I understand the four specific costs of building without specs
 

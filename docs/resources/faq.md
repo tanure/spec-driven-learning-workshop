@@ -56,19 +56,19 @@ Immediately revoke it at [github.com/settings/tokens](https://github.com/setting
 
 ## Spec-Driven Workflow
 
-### Where should I write the constitution vs. the epic?
+### Where should I write the constitution vs. the feature spec?
 
 **Constitution**: project-wide decisions that apply to every feature. Stack, values, out-of-scope at the project level.
 
-**Epic**: feature-level decisions. What this feature does, what it does not do, how done is verified.
+**Feature spec**: feature-level decisions. What this feature does, what it does not do, how done is verified.
 
-When in doubt: if the decision applies to more than one epic, it belongs in the constitution.
+When in doubt: if the decision applies to more than one feature, it belongs in the constitution.
 
 ### How specific do acceptance criteria need to be?
 
 Each AC item should be verifiable from the outside without knowing how it was implemented. If you can verify it by running the application or running a test, it's specific enough. If you need to read the code to verify it, rewrite it.
 
-### What if speckit clarify surfaces a question I can't answer yet?
+### What if my spec still has `[NEEDS CLARIFICATION]` markers and I can't answer yet?
 
 Mark it explicitly:
 ```markdown
@@ -76,7 +76,7 @@ Mark it explicitly:
 ```
 Don't leave it unmarked. An unmarked gap will be silently answered by Copilot during code generation.
 
-### How many tasks should an epic produce?
+### How many tasks should a feature produce?
 
 Depends on feature size. A good task takes 5–15 minutes in Agent Mode. If a task would take longer, split it. If a task takes under 2 minutes, consider whether it's its own task or part of a larger one.
 

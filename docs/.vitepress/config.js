@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import markdownItContainer from 'markdown-it-container'
 
 function normalizeBaseUrl(baseUrl) {
   const normalized = `/${(baseUrl || '/').replace(/^\/+|\/+$/g, '')}/`.replace(/\/{2,}/g, '/')
@@ -10,6 +11,21 @@ export default defineConfig({
   description:
     'A structured workshop that replaces vibe coding with a repeatable spec-driven development workflow using GitHub Copilot.',
   base: normalizeBaseUrl(process.env.BASE_URL),
+
+  markdown: {
+    config: (md) => {
+      md.use(markdownItContainer, 'bad-practice', {
+        render(tokens, idx) {
+          return tokens[idx].nesting === 1 ? '<div class="bad-practice">\n' : '</div>\n'
+        },
+      })
+      md.use(markdownItContainer, 'best-practice', {
+        render(tokens, idx) {
+          return tokens[idx].nesting === 1 ? '<div class="best-practice">\n' : '</div>\n'
+        },
+      })
+    },
+  },
 
   themeConfig: {
     siteTitle: 'Spec-Driven Workshop',
