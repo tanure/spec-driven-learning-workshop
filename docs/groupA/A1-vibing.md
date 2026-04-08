@@ -39,6 +39,6 @@ Vibing can produce useful snippets, but it is not predictable for team delivery.
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupA/">Group Home</a>
-  <a id="next-btn" class="btn btn-primary" href="/groupA/A2-instructions">Next →</a>
+  <a class="btn btn-secondary" href="./">Group Home</a>
+  <a id="next-btn" class="btn btn-primary" href="./A2-instructions">Next →</a>
 </div>
