@@ -47,6 +47,6 @@ tools:
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupA/A3-respects">← Previous</a>
-  <a id="next-btn" class="btn btn-primary" href="/groupA/A5-skills">Next →</a>
+  <a class="btn btn-secondary" href="./A3-respects">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="./A5-skills">Next →</a>
 </div>
