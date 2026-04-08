@@ -35,9 +35,9 @@ Skills = which workflow you execute.
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupA/A4-agents">← Previous</a>
+  <a class="btn btn-secondary" href="./A4-agents">← Previous</a>
   <span>
-    <a class="btn btn-success" href="/groupC/">Go to Group C</a>
-    <a class="btn btn-primary" href="/groupB/" style="margin-left:8px">Or start Group B</a>
+    <a class="btn btn-success" href="../groupC/">Go to Group C</a>
+    <a class="btn btn-primary" href="../groupB/" style="margin-left:8px">Or start Group B</a>
   </span>
 </div>
