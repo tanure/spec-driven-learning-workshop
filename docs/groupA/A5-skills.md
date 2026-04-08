@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "A5: AI Skills - Repeatable Workflows"
-lesson_id: A5
-group: A
-group_size: 5
-lesson_number: 5
-duration: 8
-prev: /groupA/A4-agents
-next:
 ---
+
+<div class="lesson-badges"><span class="badge group-a">Group A</span><span class="badge-time">8 min</span></div>
+
+# A5: AI Skills — Repeatable Workflows
 
 Skills package repeatable workflows.
 
@@ -38,5 +34,10 @@ Skills = which workflow you execute.
 <label><input type="checkbox" class="checkpoint-check"> I created at least one skill file.</label>
 </div>
 
-<a class="btn btn-success" href="{{ '/groupC/' | relative_url }}">Go to Group C</a>
-<a class="btn btn-primary" href="{{ '/groupB/' | relative_url }}">Or continue with Group B</a>
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="/groupA/A4-agents">← Previous</a>
+  <span>
+    <a class="btn btn-success" href="/groupC/">Go to Group C</a>
+    <a class="btn btn-primary" href="/groupB/" style="margin-left:8px">Or start Group B</a>
+  </span>
+</div>

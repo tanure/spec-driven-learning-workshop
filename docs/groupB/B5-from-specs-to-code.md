@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "B5: From Spec to Working Code"
-lesson_id: B5
-group: B
-group_size: 6
-lesson_number: 5
-duration: 5
-prev: /groupB/B4-skills-specs
-next: /groupB/B6-comparison
 ---
+
+<div class="lesson-badges"><span class="badge group-b">Group B</span><span class="badge-time">5 min</span></div>
+
+# B5: From Spec to Working Code
 
 This is the payoff: your code now follows a clear requirement contract.
 
@@ -27,4 +23,9 @@ This is the payoff: your code now follows a clear requirement contract.
 
 <div class="checkpoint">
 <label><input type="checkbox" class="checkpoint-check"> I generated code from a spec and validated it against requirements.</label>
+</div>
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="/groupB/B4-skills-specs">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="/groupB/B6-comparison">Next →</a>
 </div>

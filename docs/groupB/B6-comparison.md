@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "B6: The Big Comparison"
-lesson_id: B6
-group: B
-group_size: 6
-lesson_number: 6
-duration: 3
-prev: /groupB/B5-from-specs-to-code
-next:
 ---
+
+<div class="lesson-badges"><span class="badge group-b">Group B</span><span class="badge-time">3 min</span></div>
+
+# B6: The Big Comparison
 
 | Dimension | Vibing Coding | Spec-Driven |
 |---|---|---|
@@ -31,4 +27,7 @@ Write two short reflections:
 <label><input type="checkbox" class="checkpoint-check"> I understand when spec-driven development is the better approach.</label>
 </div>
 
-<a class="btn btn-success" href="{{ '/groupC/' | relative_url }}">Go to Group C</a>
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="/groupB/B5-from-specs-to-code">← Previous</a>
+  <a class="btn btn-success" href="/groupC/">Go to Group C →</a>
+</div>

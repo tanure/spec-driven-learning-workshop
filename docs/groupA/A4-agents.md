@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "A4: Custom Copilot Agents"
-lesson_id: A4
-group: A
-group_size: 5
-lesson_number: 4
-duration: 7
-prev: /groupA/A3-respects
-next: /groupA/A5-skills
 ---
+
+<div class="lesson-badges"><span class="badge group-a">Group A</span><span class="badge-time">7 min</span></div>
+
+# A4: Custom Copilot Agents
 
 Instructions define style. Agents define role.
 
@@ -48,4 +44,9 @@ tools:
 
 <div class="checkpoint">
 <label><input type="checkbox" class="checkpoint-check"> I created a custom agent with at least 3 behaviors.</label>
+</div>
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="/groupA/A3-respects">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="/groupA/A5-skills">Next →</a>
 </div>

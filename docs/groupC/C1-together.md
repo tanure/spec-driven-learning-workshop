@@ -1,14 +1,10 @@
 ---
-layout: lesson
 title: "C1: The Complete Workflow"
-lesson_id: C1
-group: C
-group_size: 2
-lesson_number: 1
-duration: 5
-prev:
-next: /groupC/C2-use-cases
 ---
+
+<div class="lesson-badges"><span class="badge group-c">Group C</span><span class="badge-time">5 min</span></div>
+
+# C1: The Complete Workflow
 
 This workflow combines instructions, agents, skills, and spec-kit.
 
@@ -34,4 +30,9 @@ Day 1+: Delivery
 
 <div class="checkpoint">
 <label><input type="checkbox" class="checkpoint-check"> I can describe my team workflow using this end-to-end model.</label>
+</div>
+
+<div class="navigation-footer">
+  <a class="btn btn-secondary" href="/groupC/">Group Home</a>
+  <a id="next-btn" class="btn btn-primary" href="/groupC/C2-use-cases">Next →</a>
 </div>
