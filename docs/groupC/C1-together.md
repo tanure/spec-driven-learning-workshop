@@ -33,6 +33,6 @@ Day 1+: Delivery
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupC/">Group Home</a>
-  <a id="next-btn" class="btn btn-primary" href="/groupC/C2-use-cases">Next →</a>
+  <a class="btn btn-secondary" href="./">Group Home</a>
+  <a id="next-btn" class="btn btn-primary" href="./C2-use-cases">Next →</a>
 </div>

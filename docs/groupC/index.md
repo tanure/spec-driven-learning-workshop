@@ -8,7 +8,7 @@ You unlocked Group C by completing Group A or B. This final group connects every
 
 ## Lessons
 
-1. [C1: The Complete Workflow](/groupC/C1-together) — 5 min
-2. [C2: Use Cases and Inspiration](/groupC/C2-use-cases) — 8 min
+1. [C1: The Complete Workflow](./C1-together) — 5 min
+2. [C2: Use Cases and Inspiration](./C2-use-cases) — 8 min
 
-<a class="btn btn-primary" href="/groupC/C1-together">Start Group C →</a>
+<a class="btn btn-primary" href="./C1-together">Start Group C →</a>

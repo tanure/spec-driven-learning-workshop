@@ -28,6 +28,6 @@ Write two short reflections:
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupB/B5-from-specs-to-code">← Previous</a>
-  <a class="btn btn-success" href="/groupC/">Go to Group C →</a>
+  <a class="btn btn-secondary" href="./B5-from-specs-to-code">← Previous</a>
+  <a class="btn btn-success" href="../groupC/">Go to Group C →</a>
 </div>

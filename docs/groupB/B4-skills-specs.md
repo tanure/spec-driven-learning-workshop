@@ -34,6 +34,6 @@ Create <code>.github/skills/spec-clarify/SKILL.md</code> and run it against your
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupB/B3-speckit-flow">← Previous</a>
-  <a id="next-btn" class="btn btn-primary" href="/groupB/B5-from-specs-to-code">Next →</a>
+  <a class="btn btn-secondary" href="./B3-speckit-flow">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="./B5-from-specs-to-code">Next →</a>
 </div>

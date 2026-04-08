@@ -56,6 +56,6 @@ Use this pattern for all projects: Constitution → Spec → Clarify → Plan �
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupC/C1-together">← Previous</a>
-  <a class="btn btn-success" href="/">🏁 Finish — Back to Dashboard</a>
+  <a class="btn btn-secondary" href="./C1-together">← Previous</a>
+  <a class="btn btn-success" href="../">🏁 Finish — Back to Dashboard</a>
 </div>

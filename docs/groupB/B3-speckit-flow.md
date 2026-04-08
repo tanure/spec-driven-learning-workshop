@@ -110,6 +110,6 @@ If prompted, create branch and begin coding with Copilot using your `.instructio
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupB/B2-writing-specs">← Previous</a>
-  <a id="next-btn" class="btn btn-primary" href="/groupB/B4-skills-specs">Next →</a>
+  <a class="btn btn-secondary" href="./B2-writing-specs">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="./B4-skills-specs">Next →</a>
 </div>

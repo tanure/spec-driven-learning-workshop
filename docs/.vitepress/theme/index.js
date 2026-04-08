@@ -20,12 +20,10 @@ function load() {
     return (
       JSON.parse(localStorage.getItem(key)) || {
         completed: [],
-        groupADone: false,
-        groupBDone: false,
       }
     )
   } catch (_) {
-    return { completed: [], groupADone: false, groupBDone: false }
+    return { completed: [] }
   }
 }
 
@@ -37,8 +35,6 @@ function markComplete(id) {
   const state = load()
   if (state.completed.includes(id)) return // guard: already done, no recursive loop
   state.completed.push(id)
-  state.groupADone = lessonMap.A.every((x) => state.completed.includes(x))
-  state.groupBDone = lessonMap.B.every((x) => state.completed.includes(x))
   save(state)
   renderProgress()
 }

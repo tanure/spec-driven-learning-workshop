@@ -26,6 +26,6 @@ This is the payoff: your code now follows a clear requirement contract.
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupB/B4-skills-specs">← Previous</a>
-  <a id="next-btn" class="btn btn-primary" href="/groupB/B6-comparison">Next →</a>
+  <a class="btn btn-secondary" href="./B4-skills-specs">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="./B6-comparison">Next →</a>
 </div>

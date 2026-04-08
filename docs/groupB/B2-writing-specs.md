@@ -40,6 +40,6 @@ Rewrite your B1 shopping-cart idea as one feature spec:
 </div>
 
 <div class="navigation-footer">
-  <a class="btn btn-secondary" href="/groupB/B1-without-specs">← Previous</a>
-  <a id="next-btn" class="btn btn-primary" href="/groupB/B3-speckit-flow">Next →</a>
+  <a class="btn btn-secondary" href="./B1-without-specs">← Previous</a>
+  <a id="next-btn" class="btn btn-primary" href="./B3-speckit-flow">Next →</a>
 </div>
