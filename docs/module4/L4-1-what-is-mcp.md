@@ -46,9 +46,21 @@ The PAT needs these scopes: `repo`, `read:org` (if using org repos).
 
 ### Step 2 — Create a GitHub Personal Access Token
 
+You can use either a **Fine-grained token** (recommended) or a **Classic token**:
+
+**Option A: Fine-grained token (recommended)**
+1. Go to [github.com/settings/tokens?type=beta](https://github.com/settings/tokens?type=beta)
+2. Click **Generate new token (Fine-grained)**
+3. Set expiration to: **30 days**
+4. Under **Repository access**, select your workshop repository
+5. Under **Repository permissions**, grant: **Issues** (Read and write), **Metadata** (Read-only), **Pull requests** (Read-only)
+6. Click **Generate token**
+7. Copy the token — you will not see it again
+
+**Option B: Classic token**
 1. Go to [github.com/settings/tokens](https://github.com/settings/tokens)
 2. Click **Generate new token (classic)**
-3. Set expiration to: **30 days** (this workshop token, not a permanent one)
+3. Set expiration to: **30 days**
 4. Select scopes: `repo` (all), `read:org`
 5. Click **Generate token**
 6. Copy the token — you will not see it again

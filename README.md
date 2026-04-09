@@ -9,26 +9,34 @@ A 90-minute step-by-step learning journey for developers attending the hackathon
 
 ## Topics
 
-| Group | Topic | Duration |
-|---|---|---|
-| A | Copilot Foundation | ~30 min |
-| B | Spec-Driven Development | ~35 min |
-| C | Integration + Use Cases | ~10 min |
+| Module | Title | Duration |
+|--------|-------|----------|
+| M1 | The AI Development Problem | ~10 min |
+| M2 | Copilot Best Practices | ~25 min |
+| M3 | Spec-Driven Development | ~45 min |
+| M4 | GitHub MCP Integration | ~20 min |
+| M5 | Putting It All Together | ~30 min |
 
 ## Deploy
 Pushes to `main` touching `docs/` trigger GitHub Actions deployment to Pages.
 
-## Publish As Separate Repository
-Create this folder as its own repository, for example:
-- `hackathon-learning-workshop`
+To deploy to a GitHub Pages subpath (e.g., `https://org.github.io/repo-name/`), set the `BASE_URL` environment variable before building:
 
-Then set the paired starter repository URL in workshop content:
-- `https://github.com/YOUR-ORG/spec-driven-learning-template`
+```bash
+# In your GitHub Actions workflow or locally:
+BASE_URL=/repo-name/ npx vitepress build
+```
+
+For root-path deployment (`https://org.github.io/` or a custom domain), leave `BASE_URL` unset.
+
+## Publish As Separate Repository
+Create this folder as its own repository and have participants use any blank workspace or their hackathon project folder. The spec-kit workflow creates `specs/` and `memory/` directories automatically when participants run `specify init`.
 
 ## Local Preview
 ```bash
 cd docs
-gem install bundler
-bundle install
-bundle exec jekyll serve
+npm install
+npm run docs:dev
 ```
+
+The dev server starts at `http://localhost:5173/` by default.

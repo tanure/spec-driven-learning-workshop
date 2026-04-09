@@ -29,12 +29,14 @@ Use these in Copilot Chat in VS Code, not in the terminal.
 | Workspace instructions | `.github/copilot-instructions.md` | Global project context for all Copilot interactions |
 | File-specific instructions | `.github/instructions/*.instructions.md` | Context scoped by `applyTo` glob pattern |
 | Agent | `.github/agents/<name>.agent.md` | Specialized Copilot persona |
-| Prompt | `.github/prompts/<name>.prompt.md` | Reusable prompt workflow |
+| Prompt | `.github/prompts/<name>.prompt.md` | Reusable prompt workflow (invoke from Copilot Chat by name) |
 | MCP config | `.vscode/mcp.json` | MCP server configuration |
 | Constitution | `memory/constitution.md` | Project-wide decisions and values |
 | Feature spec | `specs/<feature-branch>/spec.md` | Feature goal, AC, DoD, clarifications |
 | Plan | `specs/<feature-branch>/plan.md` | Ordered implementation phases |
 | Tasks | `specs/<feature-branch>/tasks.md` | Atomic implementation units |
+
+> **Prompt files** are covered in [L5.3](/module5/L5-3-automation). Unlike agents (which define a persistent persona), prompt files define a one-shot reusable workflow — for example, "run the Code Reviewer against the latest implementation". Create them at `.github/prompts/<name>.prompt.md` and invoke from Copilot Chat.
 
 ## Feature Spec Template
 

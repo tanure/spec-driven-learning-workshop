@@ -18,6 +18,19 @@ This is the core module. Everything in M1 and M2 was preparation for this: under
 | L3.4 | [Clarification Before Code](/module3/L3-4-clarification) | Ambiguity resolution, refining specs | ~8 min |
 | L3.5 | [From Specs to Code](/module3/L3-5-spec-to-code) | Implementing from tasks, Code Reviewer loop | ~10 min |
 
+## Prerequisites for Jumping in at M3
+
+If you're skipping M1 and M2, make sure you have the following before starting L3.1:
+
+- **VS Code with GitHub Copilot** installed and signed in
+- **A workspace or project folder** to use as your practice project
+- **A Code Reviewer agent** at `.github/agents/code-reviewer.agent.md` (used in L3.5)
+   - If you don't have one, create it during L3.5 or follow the [M2 Agents lesson](/module2/L2-2-agents) first
+- **Workspace instructions** at `.github/copilot-instructions.md` (used throughout M3–M5)
+   - If you don't have one, the spec-kit constitution (L3.2) partially serves this purpose
+
+> **Workspace note**: The `specs/` and `memory/` directories referenced in M3 exercises belong in **your practice project**, not in this workshop repository. The `specification/` folder in this workshop repo is the meta-spec for the workshop itself.
+
 ## What You'll Build
 
 By the end of Module 3, you will have:

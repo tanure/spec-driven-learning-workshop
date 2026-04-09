@@ -53,6 +53,8 @@ This is a new feature — not one you've built yet. Run the full workflow on it.
 
 Does "archiving" change any project-wide decisions? If yes, update `memory/constitution.md`. If no, note why not.
 
+> **About time targets**: The targets below are aspirational goals for participants already comfortable with the workflow — not minimums. If you're running a step for the first time, it will take longer. That's expected. The goal is to internalize the workflow, not hit the clock.
+
 **Time target**: 2 minutes.
 
 ---

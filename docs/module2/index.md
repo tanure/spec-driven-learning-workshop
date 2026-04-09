@@ -16,9 +16,10 @@ Module 2 covers the two practices that shape every Copilot interaction: **Instru
 |---|-------|-------|------|
 | L2.1 | [Instructions That Actually Work](/module2/L2-1-instructions) | Workspace + file-specific instructions | ~7 min |
 | L2.2 | [Agents and Decision Patterns](/module2/L2-2-agents) | Role-specific agents, when to use them | ~8 min |
+| L2.3 | [Skills and Prompt Files](/module2/L2-3-skills) | Reusable prompt workflows *(deferred)* | — |
 | L2.4 | [Plan Mode vs. Agent Mode](/module2/L2-4-plan-vs-agent) | Two-step feature development | ~10 min |
 
-> **Note**: L2.3 (Skills) is a deferred session — it is not part of the workshop today.
+> **Note**: L2.3 (Skills) is a deferred session — it is not part of the workshop today. A brief reference page is provided for context.
 
 ## What You'll Build
 

@@ -58,6 +58,7 @@ export default defineConfig({
             { text: 'Module Overview', link: '/module2/' },
             { text: 'L2.1: Instructions That Actually Work', link: '/module2/L2-1-instructions' },
             { text: 'L2.2: Agents and Decision Patterns', link: '/module2/L2-2-agents' },
+            { text: 'L2.3: Skills and Prompt Files (Deferred)', link: '/module2/L2-3-skills' },
             { text: 'L2.4: Plan Mode vs. Agent Mode', link: '/module2/L2-4-plan-vs-agent' },
           ],
         },

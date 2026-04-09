@@ -48,7 +48,7 @@ features:
 
 | Time | Module | Focus |
 |------|--------|-------|
-| 0–15 min | M1 | The AI Development Problem |
+| 0–10 min | M1 | The AI Development Problem |
 | 15–40 min | M2 | Copilot Best Practices |
 | 40–85 min | M3 | Spec-Driven Development |
 | 85–105 min | M4 | GitHub MCP Integration |

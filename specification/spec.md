@@ -10,7 +10,7 @@
 
 The workshop teaches hackathon participants how to develop software effectively using AI Agents (primarily GitHub Copilot), by applying:
 
-- **Best practices**: Instructions, Agents (custom modes), and Skills (repeatable workflows)
+- **Best practices**: Instructions, Agents (custom modes), and Specs (spec-driven development) — plus Skills/Prompt files as a fourth practice (introduced in M5, deferred as a standalone session)
 - **Spec-Driven Development**: using GitHub Spec-Kit as the framework to move from vague ideas to structured, implementable specifications
 
 ### Goals
@@ -79,7 +79,7 @@ The workshop lives at `docs/` — a VitePress site deployed to GitHub Pages.
 |--------|-------|----------|-------------|
 | M1 | The AI Development Problem | ~10 min | The vibing trap; preview of the three pillars |
 | M2 | GitHub Copilot Best Practices | ~25 min | Instructions, Agents, Skills, Plan vs Agent Mode |
-| M3 | Spec-Driven Development | ~30 min | Full spec-kit workflow — also a standalone entry point |
+| M3 | Spec-Driven Development | ~45 min | Full spec-kit workflow — also a standalone entry point |
 | M4 | Extending with MCP | ~10 min | What is MCP; GitHub MCP hands-on |
 | M5 | Integration & Use Cases | ~15 min | End-to-end workflow; 3 hackathon project templates |
 
@@ -282,7 +282,8 @@ Story [X] must be complete before this starts. (or: None)
 - [x] **VitePress config** — Sidebar/nav updated to M1–M5 + Resources structure; group A/B/C removed. _(docs implementation — done)_
 - [ ] **GitHub Actions** — Confirm or update deployment workflow for new structure
 - [x] **Home page rewrite** — Dual entry CTAs (Start from Beginning / Jump to Spec-Driven Dev), 5 module feature cards, workshop flow table. _(docs implementation — done)_
-- [ ] **Starter template** — Decide linking / creation strategy for `spec-driven-learning-template`
+- [x] **GitHub Actions** — Workshop repo uses push-to-main trigger on `docs/` changes. Deployment workflow confirmed via existing VitePress build. _(resolved — no new workflow needed)_
+- [x] **Starter template** — No external starter template required. Participants use their own workspace and run `specify init --here --ai copilot` to set up the `specs/` and `memory/` directory structure. README updated to reflect this. _(resolved)_
 - [x] **Old content removal** — `docs/groupA/`, `docs/groupB/`, `docs/groupC/` deleted. _(docs implementation — done)_
 
 ---

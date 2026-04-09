@@ -28,6 +28,8 @@ These are the **three pillars**:
 2. **Agents** — create specialized roles for specific, repeatable tasks
 3. **Specs** — define what done means before writing a line of code
 
+> **Note**: A fourth practice — **Skills/Prompt files** — extends the workflow with reusable automated sequences. It is not taught as a dedicated session but is introduced briefly in L5.3.
+
 ::: bad-practice
 Treating every Copilot failure as a prompt problem and trying to fix it by rephrasing. This is pattern-matching on symptoms. The root cause is missing structure — and rephrasing doesn't add structure.
 :::

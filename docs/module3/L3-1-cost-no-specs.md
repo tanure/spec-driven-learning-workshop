@@ -41,22 +41,43 @@ Write the spec first, always. For simple features, it takes five minutes and cos
 
 ### Step 1 — Install spec-kit
 
-Open a terminal in your project root and run:
+spec-kit is a Python CLI tool that installs slash commands into your AI coding agent (including GitHub Copilot Chat). It requires [uv](https://docs.astral.sh/uv/) — a fast Python package manager.
+
+**First, install uv if you don't have it:**
 
 ```bash
-npm install -g @github/spec-kit
+# Windows (PowerShell)
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# macOS / Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**Then install the Specify CLI:**
+
+```bash
+# Install the latest stable release
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
 ```
 
 Verify the installation:
 
 ```bash
-speckit --version
+specify check
 ```
 
-- Expected result: version number printed to terminal.
+- Expected result: Specify CLI version and environment check printed to terminal.
 - Why this matters: spec-kit is the scaffolding tool for the spec-driven workflow. All subsequent exercises in M3 use it.
 
-> **Note**: If `@github/spec-kit` is not yet available, check the [spec-kit repository](https://github.com/github/spec-kit) for the correct package name or install instructions. The package may be published under a different name.
+**Initialize spec-kit in your project workspace:**
+
+Open a terminal in your project root and run (for GitHub Copilot):
+
+```bash
+specify init --here --ai copilot
+```
+
+This creates the spec-kit configuration files and registers the slash commands into your workspace. After this step, `/speckit.*` commands become available in VS Code Copilot Chat.
 
 ### Step 2 — Create your first feature spec
 
@@ -85,7 +106,8 @@ Write a single sentence: `In my L1.1 runs, approximately __% of generated code w
 
 ## Checkpoint
 
-- [ ] I installed spec-kit and confirmed the version
+- [ ] I installed the Specify CLI and confirmed it works with `specify check`
+- [ ] I ran `specify init --here --ai copilot` and `/speckit.*` commands are available in Copilot Chat
 - [ ] I ran `/speckit.specify` and have a generated `specs/<feature-branch>/spec.md`
 - [ ] I estimated the rework percentage from my L1.1 runs
 - [ ] I understand the four specific costs of building without specs

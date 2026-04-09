@@ -37,7 +37,7 @@ Run `/speckit.plan` to generate the plan, review it against your feature spec, e
 In Copilot Chat, enter:
 
 ```text
-/speckit.plan WebSocket for session updates, file-based storage for persistence
+/speckit.plan File-based storage for session persistence
 ```
 
 Spec-kit reads your feature spec and constitution, then generates an implementation bundle in `specs/<feature-branch>/`.

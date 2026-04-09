@@ -8,14 +8,18 @@ title: FAQ and Troubleshooting
 
 ### spec-kit isn't installing
 
-Check that Node.js is installed and on your `PATH`:
-```bash
-node --version   # should be 18+
-npm --version
-```
-Try with explicit registry: `npm install -g @github/spec-kit --registry https://registry.npmjs.org`
+spec-kit is a Python CLI tool, not an npm package. Install it with [uv](https://docs.astral.sh/uv/):
 
-If the package is not found, check the [spec-kit repository](https://github.com/github/spec-kit) for the correct package name — it may be published under a different name.
+```bash
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+```
+
+Verify with:
+```bash
+specify check
+```
+
+If `uv` is not installed, see [L3.1](/module3/L3-1-cost-no-specs) for platform-specific install instructions. The spec-kit CLI requires Python 3.11+ and Git; `specify check` will report any missing dependencies.
 
 ### Copilot ignores my workspace instructions
 
@@ -102,7 +106,11 @@ If you already use Copilot instructions and agents regularly, yes — start at [
 
 ### Is L2.3 (Skills) part of the workshop?
 
-No. L2.3 is deferred and not covered in this workshop session.
+No. L2.3 (Skills/Prompt files) is deferred and not covered as a standalone session today.
+
+**What are Skills/Prompt files?** Prompt files (`.github/prompts/<name>.prompt.md`) are reusable, version-controlled prompts that define multi-step workflows you can invoke by name in Copilot Chat. Unlike agents (which define a persistent persona), prompt files run once and terminate — they're good for things like "run the code reviewer, check tests, then update the spec status".
+
+**Why deferred?** The core spec-driven workflow (constitution → spec → plan → tasks → code) is teachable and immediately useful without prompt file automation. Introducing a fourth artifact type during the same session would dilute the learning. Prompt files are introduced briefly in [L5.3: Progressive Automation](/module5/L5-3-automation) as a Level 1 automation pattern. A dedicated session is planned for a future workshop edition. The [L2.3 placeholder page](/module2/L2-3-skills) has more details.
 
 ### Do I need to complete the workshop in order?
 

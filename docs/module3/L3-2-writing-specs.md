@@ -42,9 +42,13 @@ Writing acceptance criteria like: "When a user marks a topic as complete, the pr
 
 ### Step 1 — Draft the project constitution
 
-Open `memory/constitution.md` (or create it if your repo does not already have one).
+Create the `memory/` directory in your project root if it doesn't exist yet:
 
-Write your constitution for the study planner using this structure:
+```bash
+mkdir memory
+```
+
+Open `memory/constitution.md` and write your constitution for the study planner using this structure:
 
 ```markdown
 # Study Planner Constitution
